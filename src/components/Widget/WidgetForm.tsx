@@ -37,7 +37,7 @@ const WidgetForm: React.FC = () => {
       <div className="flex py-8 gap-2 w-full">
         {Object.entries(feedbackTypes).map(([key, value]) => {
           return (
-            <button className="widget-form-button">
+            <button className="widget-form-button" key={key}>
               <img src={value.image.source} alt={value.image.alt} />
               <button>{value.title}</button>
             </button>
@@ -46,7 +46,7 @@ const WidgetForm: React.FC = () => {
       </div>
 
       <footer>
-        Feito com ♥ por{" "}
+        Feito com ♥ por
         <a className="underline underline-offset-2" href="#">
           Will Silva
         </a>
